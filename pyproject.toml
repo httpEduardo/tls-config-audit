@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tls-config-audit"
+version = "1.0.0"
+description = "Static audit of nginx and Apache TLS configuration for weak protocols, ciphers and HSTS settings."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Eduardo" }]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Security",
+    "Environment :: Console",
+]
+
+[project.scripts]
+tls-config-audit = "tls_config_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
